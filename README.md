@@ -69,12 +69,12 @@ git clone https://github.com/OussamaCHI2/Diabete-detecteur.git
 cd diabetes-detecteur
 ```
 
-### 1. Run the Flask server
+### 2. Run the Flask server
 ```bash
 python Apiconn.py
 The API will be available at `http://localhost:5000`
 ```
-### 2. Set Up the Frontend (React App)
+### 3. Set Up the Frontend (React App)
 ```bash
 # Install dependencies
 npm install
