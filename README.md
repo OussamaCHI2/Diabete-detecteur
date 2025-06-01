@@ -69,15 +69,12 @@ git clone https://github.com/OussamaCHI2/Diabete-detecteur.git
 cd diabetes-detecteur
 ```
 
-### 2. Set Up the Backend (Flask API)
-
-# Run the Flask server
+### 1. Run the Flask server
+```bash
 python Apiconn.py
-```
-
 The API will be available at `http://localhost:5000`
-
-### 3. Set Up the Frontend (React App)
+```
+### 2. Set Up the Frontend (React App)
 ```bash
 # Install dependencies
 npm install
@@ -88,34 +85,6 @@ npm start
 
 The React app will be available at `http://localhost:3000`
 
-## 📁 Project Structure
-
-```
-diabetes-prediction-app/
-├── 📁 backend/
-│   ├── 📄 app.py                 # Flask application entry point
-│   ├── 📄 model.py               # ML model definitions
-│   ├── 📄 utils.py               # Utility functions
-│   ├── 📄 requirements.txt       # Python dependencies
-│   ├── 📁 models/                # Trained ML models
-│   │   └── 📄 diabetes_model.pkl
-│   └── 📁 data/                  # Training datasets
-│       └── 📄 diabetes.csv
-├── 📁 frontend/
-│   ├── 📁 src/
-│   │   ├── 📁 components/        # React components
-│   │   │   ├── 📄 Dashboard.jsx
-│   │   │   ├── 📄 PredictionForm.jsx
-│   │   │   └── 📄 ResultsDisplay.jsx
-│   │   ├── 📁 services/          # API service functions
-│   │   │   └── 📄 api.js
-│   │   ├── 📁 styles/            # CSS and styling
-│   │   └── 📄 App.jsx            # Main React component
-│   ├── 📄 package.json           # Node.js dependencies
-│   └── 📄 tailwind.config.js     # Tailwind configuration
-├── 📄 README.md                  # This file
-└── 📄 .gitignore                 # Git ignore rules
-```
 
 ## 🔧 API Endpoints
 
@@ -139,14 +108,9 @@ Content-Type: application/json
 **Response:**
 ```json
 {
-  "prediction": 1
+  "prediction": 1 Or 0
   ]
 }
-```
-
-### Health Check
-```http
-GET /api/health
 ```
 
 ## 🧪 Model Performance
@@ -162,48 +126,6 @@ Our machine learning model achieves impressive accuracy:
 
 The model was trained on the Pima Indians Diabetes Database with extensive feature engineering and hyperparameter tuning.
 
-### Manual Deployment
-
-#### Backend (Flask)
-```bash
-# Run the backend
-python Apiconn.py
-```
-
-#### Frontend (React)
-```bash
-# Build for production
-npm run build
-
-# Serve with a static server
-npm install -g serve
-serve -s build -l 3000
-```
-
-## 🔒 Environment Variables
-
-Create a `.env` file in the backend directory:
-
-```env
-FLASK_ENV=production
-SECRET_KEY=your-secret-key-here
-MODEL_PATH=./models/diabetes_model.pkl
-CORS_ORIGINS=http://localhost:3000,https://your-domain.com
-```
-
-## 🧪 Testing
-
-### Backend Tests
-```bash
-cd backend
-python -m pytest tests/ -v
-```
-
-### Frontend Tests
-```bash
-cd frontend
-npm test
-```
 
 ## 📈 Performance Optimization
 
